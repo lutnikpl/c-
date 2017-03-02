@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdio.h>
 #include <string.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -31,9 +32,12 @@ int main()
     }
 
     do{
+    
     cout<<endl;
-    cout<< "Podaj jedna literke z hasla"<<endl;
-    cin>>a;
+    cout<< "Podaj jedna literke z hasla: ";
+    a = getch();
+    cout<<endl;
+    system("CLS");
     for(int j=0;j<dlugosc;j++){
         if(a==haslo[j])
         {
@@ -48,9 +52,9 @@ int main()
 
 
     }while(licznik!=dlugosc);
-
+	cout<<endl;
     cout<<"Gratulacje wygrales"<<endl;
-    cout<<"Haslo to : "<<haslo<<endl;
+    cout<<"Haslo to :  "<<haslo<<endl;
 
 
 
